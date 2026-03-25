@@ -85,4 +85,9 @@
 // 8. isEqual: 和 hash 是否应该一起重写？为什么？这个问题的hash是什么，没有了解过
 // NSDictionary / NSSet 用 hash 做查找，isEqual 判断“逻辑相等”，如果只重写 isEqual：容器可能认为“不同对象”
 
+- (NSUInteger)hash {
+    return [self getStudentId].hash;
+}
+
+
 @end

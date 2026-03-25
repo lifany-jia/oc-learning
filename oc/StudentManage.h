@@ -22,8 +22,16 @@
 // 12. 这个类如果被alloc创建后是不是只会分配一个能够存放NSMutableArray的指针的内存？那具体什么时候回分配堆上的内存呢？
 // alloc分配isa以及所有ivar，但此时指针=nil，所以要init自己初始化创建数组对象
 
+@property (nonatomic, strong) NSMutableDictionary<NSString *, Student*> *dictionary;
+
 - (void)addStudent:(Student*)stu;
 - (void)removeStudent:(Student*)stu;
 - (Student *)findStudentInfoById:(NSString *)studentId;
 - (void)printAllStudent;
+- (void)sortByAgeByAscending;
+- (void)removeDuplicateStudents;
+- (NSMutableDictionary *)studentDict;
+- (void)addStudentDic:(Student *)stu;
+- (NSArray<Student *>*)findAdultStudents;
+- (double)averageAge;
 @end
